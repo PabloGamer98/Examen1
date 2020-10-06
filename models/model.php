@@ -60,7 +60,7 @@ class Datos extends Conexion{
 //MODELO PARA REGISTRAR UN LIBRO
 	public function registroLibroModel($datosModel,$tabla){
 
-		$stmt=conexion::conectar()->prepare("INSERT INTO $tabla(isbn,nombre,autor,editorial,edicion,año) VALUES(:isbn,:titulo,:autor,:editorial,:edicion,:year)");
+		$stmt=conexion::conectar()->prepare("INSERT INTO $tabla(isbn,nombre,autor,editorial,edicion,year) VALUES(:isbn,:titulo,:autor,:editorial,:edicion,:year)");
 		//se bindean todos los datos que seran registrados en la  tabla libros
 		$stmt->bindParam(":isbn",$datosModel["isbn"],PDO::PARAM_STR);
 		$stmt->bindParam(":titulo",$datosModel["titulo"],PDO::PARAM_STR);
@@ -97,7 +97,7 @@ class Datos extends Conexion{
 	public function actualizarLibrosModel($datosModel,$tabla)
 	{
 		//preparar el query
-		$stmt=Conexion::conectar()->prepare("UPDATE $tabla SET isbn=:isbn, nombre=:titulo, autor=:autor, editorial=:editorial, edicion=:edicion, año=:year WHERE id=:id");
+		$stmt=Conexion::conectar()->prepare("UPDATE $tabla SET isbn=:isbn, nombre=:titulo, autor=:autor, editorial=:editorial, edicion=:edicion, year=:year WHERE id=:id");
 		//ejecutar el query
 		$stmt->bindParam(":isbn",$datosModel["isbn"],PDO::PARAM_STR);
 		$stmt->bindParam(":titulo",$datosModel["titulo"],PDO::PARAM_STR);

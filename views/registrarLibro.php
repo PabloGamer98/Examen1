@@ -117,7 +117,7 @@ session_start();
         <input required type="text" placeholder="Autor del libro" name="autorRegistro" />
         <input required type="text" placeholder="Editorial del libro" name="editorialRegistro" />
         <input required type="text" placeholder="Edicion del libre" name="edicionRegistro" />
-        <input required type="number" placeholder="Año de publicacion" name="añoRegistro" min="1900" max="2100" maxlength="4" minlength="4" />
+        <input required type="number" placeholder="Año de publicacion" name="yearRegistro" min="1900" max="2100" maxlength="4" minlength="4" />
         <button type="submit">Registrar</button>
       </form>
     </div>

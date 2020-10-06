@@ -58,7 +58,7 @@ public function registroLibrosController(){
         	"autor"=>$_POST["autorRegistro"],
         	"editorial"=>$_POST["editorialRegistro"],
         	"edicion"=>$_POST['edicionRegistro'],
-        	"year"=>$_POST["añoRegistro"]);
+        	"year"=>$_POST["yearRegistro"]);
                 //Enviamos los parametros al Modelo para que procese el registro
                 $respuesta = Datos::registroLibroModel($datosController,"libros");
 
@@ -111,7 +111,7 @@ public function registroLibrosController(){
 				<td>'.$item["autor"].'</td>
 				<td>'.$item["editorial"].'</td>
 				<td>'.$item["edicion"].'</td>
-				<td>'.$item["año"].'</td>
+				<td>'.$item["year"].'</td>
 
 				<td><a href="index.php?action=editarLibro&id='.$item["id"].'"><button class="btn btn-primary">Editar</button>
 				<a href="index.php?action=libros&idBorrar='.$item["id"].'"><button class="btn btn-danger">Borrar</button></td>
