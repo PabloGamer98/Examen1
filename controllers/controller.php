@@ -149,7 +149,7 @@ public function editarLibrosController(){
 		<input type='text' value=".$respuesta['edicion']." name='edicionEditar' required>
 
 
-		<input type='text' value=".$respuesta['año']." name='añoEditar' required>";
+		<input type='text' value=".$respuesta['year']." name='añoEditar' required>";
 }
 
 
